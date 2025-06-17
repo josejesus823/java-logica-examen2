@@ -1,3 +1,63 @@
+# 🧾 Resumen del código `Main.java`
+
+Este programa simula un **sistema de liquidación de pagos para un programador freelance**. Su flujo principal consiste en:
+
+---
+
+## 1️⃣ 📥 Entrada de datos personales y laborales
+Se solicitan:
+- Nombre del programador
+- Correo electrónico
+- Ciudad y país
+- Edad
+- Tipo de contrato: `Fulltime`, `Parttime`, `Freelance`
+- Nivel de experiencia: `Junior` o `Senior`
+- Años de experiencia profesional
+
+---
+
+## 2️⃣ 💰 Cálculo de tarifa por hora
+La tarifa final por hora se calcula como:
+- **Tarifa base:** $50.0
+- **Bono por nivel:** $20 si es Senior, $0 si es Junior
+- **Bono por experiencia:** 1.5 × años de experiencia
+
+**Resultado:** `tarifaHoraFinal = tarifaBase + tarifaNivel + tarifaExperiencia`
+
+---
+
+## 3️⃣ 📂 Registro de proyectos
+Se ingresan los nombres de **3 clientes**, y para cada uno:
+- Las horas trabajadas
+- Un bono adicional
+
+---
+
+## 4️⃣ 📊 Cálculo de pagos
+Se calcula el pago total por cliente:
+```
+pago = (horas * tarifaHoraFinal) + bono
+```
+Luego se calcula:
+- **Subtotal:** suma de los 3 pagos
+- **Descuentos:** 3% de fondo de ahorro
+- **Impuestos:** 9% de retenciones
+- **Total a recibir:** `subtotal - descuentos - impuestos`
+
+---
+
+## 5️⃣ 🖨️ Reporte final
+El programa imprime un informe con:
+- Datos personales y laborales
+- Fecha de liquidación actual (`LocalDate.now()`)
+- Tarifa final por hora
+- Detalles por cliente
+- Subtotal, descuentos, impuestos y total final a recibir
+
+---
+
+🧠 **Resumen final:**  
+Este código es útil para **freelancers** que desean automatizar su cálculo de ingresos basado en experiencia, tipo de contrato y trabajos con distintos clientes.
 
 # 🛠️ Lista de Errores y Correcciones en el Código Java
 
@@ -176,5 +236,3 @@ LocalDate fechaActual = LocalDate.now();
 - ✅ **Recomendación:** Usar `System.out.println("Edad: " + edad);` si se desea mostrar
 
 ---
-
-🧠 **Consejo final:** Revisa siempre la consola por errores de compilación. Java es estricto con la sintaxis, especialmente con los métodos en mayúscula, punto y coma `;`, y los nombres de métodos de `Scanner`.
